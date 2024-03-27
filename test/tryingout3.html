@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    body {
+        background-image: url('/day-3/grbok8dnz1fy.png');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        height: 100% ; 
+
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    html, body {
+    height: 100%;
+    margin: 0; /* Removes default margin */
+    }
+
+    .form-selection {
+            background-color: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-sizing: border-box; /* Ensures padding and border are included in width/height */
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: white;;
+            width: 100%; /* Make form width responsive to the container's width */
+        }
+
+        input {
+            padding:20px;
+            border: 1px solid #ccc;
+            border-radius: 5px
+        
+}
+
+.btn {
+width: 70px;
+height: 40px;
+border-radius: 10px;
+border:none;
+background-color: green;
+color: white;
+left: 87px;
+position: relative;
+}
+
+.btn:hover {
+background-color: lawngreen;
+
+}
+
+
+</style>
+
+
+
+
+
+
+<body>
+    
+     <section  class="form-selection"   >
+       <header>
+        <h2>Enlisting Form</h2>
+       </header>
+           <form action="http://127.0.0.1:5500/test/tryingout3.html" method="post">
+           <label for="soilder-name">solider name</label>
+           <input type="text" id="name" name="soilder-name" required>
+
+           <label for="email">Email:</label>
+           <input type="email" id="email" name="email" required>
+
+           <label for="password">password</label>
+           <input type="text" id="password" name="password" required>
+
+           <label for="password-confirm">confirm password</label>
+           <input type="text" id="password-confirm" name="confirm password" required>
+           <p>by clicking submit you agree that you read our <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="recipe-link">Terms of service</a>
+           </p>
+
+
+           <button class="btn" type="submit">Submit</button>
+       </form>
+
+
+           </form>
+
+
+
+
+     </section>
+</body>
+</html>
