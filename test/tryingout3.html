@@ -1,117 +1,52 @@
+
+To place the boxes inside a larger container that spans half of the page, you can modify the .box-container to have a specific width and center it on the page. You can also add some padding to the container for better spacing around the boxes. Here's how you can do it:
+
+html
+Copy code
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<style>
-
-    body {
-        background-image: url('/day-3/grbok8dnz1fy.png');
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-        height: 100% ; 
-
-        display: flex;
+    <title>Three Colored Boxes</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0;
-
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    html, body {
-    height: 100%;
-    margin: 0; /* Removes default margin */
-    }
-
-    .form-selection {
-            background-color: white;
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            box-sizing: border-box; /* Ensures padding and border are included in width/height */
-            
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            height: 100vh; /* Full height of the viewport */
         }
-
-
-        form {
+        .box-container { 
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            background-color: white;;
-            width: 100%; /* Make form width responsive to the container's width */
+            width: 50%; /* Container spans half of the page width */
+            justify-content: center; /* Center the boxes inside the container */
+            padding: 20px; /* Add some space inside the container */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+            border-radius: 10px; /* Optional: adds rounded corners */
         }
-
-        input {
-            padding:20px;
-            border: 1px solid #ccc;
-            border-radius: 5px
-        
-}
-
-.btn {
-width: 70px;
-height: 40px;
-border-radius: 10px;
-border:none;
-background-color: green;
-color: white;
-left: 87px;
-position: relative;
-}
-
-.btn:hover {
-background-color: lawngreen;
-
-}
-
-
-</style>
-
-
-
-
-
-
+        .box { /* Define the dimensions and margin for all boxes */
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+        .red-box {
+            background-color: red;
+        }
+        .green-box {
+            background-color: green;
+        }
+        .blue-box {
+            background-color: blue;
+        }
+    </style>
+</head>
 <body>
-    
-     <section  class="form-selection"   >
-       <header>
-        <h2>Enlisting Form</h2>
-       </header>
-           <form action="http://127.0.0.1:5500/test/tryingout3.html" method="post">
-           <label for="soilder-name">solider name</label>
-           <input type="text" id="name" name="soilder-name" required>
-
-           <label for="email">Email:</label>
-           <input type="email" id="email" name="email" required>
-
-           <label for="password">password</label>
-           <input type="text" id="password" name="password" required>
-
-           <label for="password-confirm">confirm password</label>
-           <input type="text" id="password-confirm" name="confirm password" required>
-           <p>by clicking submit you agree that you read our <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="recipe-link">Terms of service</a>
-           </p>
-
-
-           <button class="btn" type="submit">Submit</button>
-       </form>
-
-
-           </form>
-
-
-
-
-     </section>
+    <div class="box-container">
+        <div class="box red-box"></div>
+        <div class="box green-box"></div>
+        <div class="box blue-box"></div>
+    </div>
 </body>
 </html>

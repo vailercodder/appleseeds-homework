@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Nav Bar</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+        .nav-item {
+            padding: 10px;
+            margin-right: 10px; 
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        .green {
+            background-color: green;
+        }
+        .yellow {
+            background-color: yellow;
+            color: black; 
+        }
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-item green">Home</div>
+        <div class="nav-item yellow">About</div>
+        <div class="nav-item red">Contact</div>
+    </nav>
+</body>
+</html>
+
