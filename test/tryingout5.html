@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cool Border</title>
+    <style>
+      .cool-border {
+        position: relative;
+        width: 300px;
+        height: 100px;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px;
+      }
+
+      /* Top left corner */
+      .cool-border::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 3px solid red;
+        border-left: 3px solid red;
+        width: 30px;
+        height: 30px;
+      }
+
+      /* Top right corner */
+      .cool-border::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-top: 3px solid red;
+        border-right: 3px solid red;
+        width: 30px;
+        height: 30px;
+      }
+
+      /* Bottom left corner */
+      .cool-border .bottom-left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom: 3px solid red;
+        border-left: 3px solid red;
+        width: 30px;
+        height: 30px;
+      }
+
+      /* Bottom right corner */
+      .cool-border .bottom-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-bottom: 3px solid red;
+        border-right: 3px solid red;
+        width: 30px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cool-border">
+      Cool Border
+      <div class="bottom-left"></div>
+      <div class="bottom-right"></div>
+    </div>
+  </body>
+</html>

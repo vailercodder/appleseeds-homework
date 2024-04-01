@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --primary-color: white;
+      --secondary-color: #2ecc71;
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--primary-color);
+    }
+
+    .m1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      text-align: center;
+      background-color: var(--primary-color);
+    }
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: start;
+      width: 50%;
+      height: 60vh;
+      border: 2px solid red;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: aliceblue;
+      position: relative;
+      box-shadow: 10px 10px gray;
+    }
+
+    .img {
+      width: 200px;
+      height: 50%;
+      top: 0;
+      right: 0;
+    }
+
+    .card p {
+      font-family: sans-serif;
+      position: relative;
+      font-size: 30px;
+    }
+    .bio {
+      position: relative;
+      color: lime;
+    }
+
+    .bottom-box {
+      height: 50%;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      background-color: gold;
+    }
+
+    .dark-theme {
+      --primary-color: black;
+    }
+
+    .btn1 {
+      box-shadow: 10px 10px gray;
+      color: red;
+    }
+  </style>
+  <body>
+    <header></header>
+    <main class="m1">
+      <section class="card">
+        <img
+          class="img"
+          src="https://wallpapers.com/images/featured/cool-profile-picture-87h46gcobjl5e4xu.jpg"
+          alt="me"
+        />
+        <p>name:shahar</p>
+
+        <img
+          class="img"
+          src="https://media1.giphy.com/media/f7YmPHc6VdnX3ZxEQR/200w.gif?cid=6c09b952aojv3s4hmkgpcfram4r0k1viucz004i53rb7lpqj&ep=v1_gifs_search&rid=200w.gif&ct=g"
+          alt="Animated image showing something interesting"
+        />
+        <p>job title:mega junior developer</p>
+
+        <img
+          class="img"
+          src="https://media2.giphy.com/media/1AZUinVNuk5tKLtOGE/200w.gif?cid=6c09b952f3edzcgtbk7smwpgwxzlvkrerx0zsvulopnruwwq&ep=v1_gifs_search&rid=200w.gif&ct=g"
+          alt="bio"
+        />
+        <p class="bio"></p>
+        <div class="bottom-box">
+          <p>bio:i am starting my journey in front end development</p>
+          <p>p.s: press this button</p>
+          <button
+            class="btn1"
+            onclick="document.body.classList.toggle('dark-theme')"
+          >
+            Toggle Theme
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

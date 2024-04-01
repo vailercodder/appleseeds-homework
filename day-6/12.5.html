@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip Example</title>
+    <style>
+
+      a[data-tooltip] {
+          position: relative;
+          text-decoration: none;
+          color: #007BFF;
+      }
+
+
+      a[data-tooltip]::after {
+          content: attr(data-tooltip);
+          position: relative  ;
+          bottom: 100%; /
+          left: 50%;
+          transform: translateX(-10%);
+          white-space: nowrap;
+          visibility: hidden;
+          opacity: 0;
+          background-color: black;
+          color: white;
+          text-align: center;
+          border-radius: 5px;
+          padding: 5px 10px;
+          font-size: 12px;
+          transition: opacity 0.3s, visibility 0.3s; /
+      }
+
+
+      a[data-tooltip]:hover::after {
+          visibility: visible;
+          opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" data-tooltip="This is my tooltip value!"
+      ><br /><br />whats up!!!</a
+    >
+  </body>
+</html>

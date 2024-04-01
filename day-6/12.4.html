@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX 12.4 pseudo cool border</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%; /* Adjust the width as needed */
+        height: 60vh; /* Adjust the height as needed */
+        border: 2px solid #141414; /* Cool border */
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .upper-box,
+      .bottom-box {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: black; /* Light grey background for visibility */
+      }
+      .very-cool-border {
+        color: yellowgreen;
+        margin: 10px 0; /* Spacing between the boxes and the text */
+      }
+
+      .upper-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15rem; /* Full width to match the box */
+        height: 10rem; /* Full height to match the box */
+        border-top: 3px solid red; /* Top border in red */
+        border-left: 5px solid red; /* Left border in red */
+        box-sizing: border-box;
+      }
+
+      .upper-box::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 15rem; /* Full width to match the box */
+        height: 10rem; /* Full height to match the box */
+        border-top: 3px solid red; /* Top border in red */
+        border-right: 5px solid red; /* Left border in red */
+        box-sizing: border-box;
+      }
+
+      .bottom-box::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 15rem;
+        height: 10rem;
+        border-bottom: 3px solid red;
+        border-left: 5px solid red;
+        box-sizing: border-box;
+      }
+      .bottom-box::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 15rem;
+        height: 10rem;
+        border-bottom: 3px solid red;
+        border-right: 5px solid red;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="upper-box"></div>
+        <div class="very-cool-border">Very Cool Border</div>
+        <div class="bottom-box"></div>
+      </div>
+    </div>
+  </body>
+</html>

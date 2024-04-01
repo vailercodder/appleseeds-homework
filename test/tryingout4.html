@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<style>
+
+.first-paragraph::first-letter {
+    font-size: 200%; 
+    color: red;  }
+
+.first-paragraph::first-line {
+    font-weight: bold; 
+}
+
+.second-paragraph::before,
+.second-paragraph::after {
+    content: '“'; 
+    font-style: italic; 
+}
+
+.second-paragraph::after {
+    content: '”'; 
+}
+
+.second-paragraph::first-line {
+    font-style: italic;
+}
+
+</style>
+
+
+<body>
+
+    <article>
+        <p  class="first-paragraph">you, whats up, its a really beautiful day outside.</p>
+        <p  class="second-paragraph">yeah, you are definitely right, its very pretty today.</p>
+    </article>
+    
+    
+</body>
+</html>
