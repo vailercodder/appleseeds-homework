@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14.2 buttons</title>
+  </head>
+  <style>
+    /* .btn1 {
+          width: 100px;
+          height: 100px;
+          border-color: aqua;
+          transition: all 2s ease-in-out;
+          border-radius: 10px;
+          background-color: bisque;
+          position: relative;
+          z-index: 1;
+        }
+        .btn1::after {
+          content: "";
+          background: red;
+          width: 100px;
+          height: 100px;
+          display: block;
+
+          overflow: hidden;
+          position: static;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        } */
+
+    .btn1 {
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn1::after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: "wow";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      top: -100%;
+      left: 0;
+      transition: transform 0.5s ease, background-color 0.5s ease;
+      z-index: 2;
+    }
+    .btn1:hover::after {
+      transform: translate(0, 100px);
+      background: red;
+    }
+
+    .btn2 {
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn2::after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: "wow";
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      top: 0;
+      left: 100%;
+      transition: transform 0.5s ease, background-color 0.5s ease;
+
+      background: red;
+    }
+    .btn2:hover::after {
+      transform: translateX(-100%);
+    }
+
+    .btn3 {
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn3::after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: "wow";
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      top: 0;
+      left: 100%;
+      transition: transform 0.5s ease, background-color 0.5s ease;
+      background: red;
+    }
+
+    .btn3:hover::after {
+      transform: translateX(-100%) rotate(360deg);
+    }
+
+    .btn4 {
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn4::after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: "wow";
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      top: 0;
+      left: 0%;
+      transition: transform 0.5s ease, background-color 0.5s ease;
+      background: red;
+    }
+
+    .btn4:hover::after {
+      transform: scale(1.5);
+      background-color: gold;
+    }
+
+    .btn5 {
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.5s ease;
+    }
+    .btn5:hover {
+      transform: skewX(20deg) skewY(10deg);
+    }
+
+    .btn5::after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: "wow";
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      top: 0;
+      left: 100%;
+      transition: transform 0.5s ease, background-color 0.5s ease;
+      background: red;
+    }
+
+    .btn5:hover::after {
+      transform: translateX(-100%) rotate(360deg) skewX(20deg) skewY(10deg);
+    }
+  </style>
+  <body>
+    <div><button class="btn1">wow</button></div>
+    <div><button class="btn2">wow</button></div>
+    <div><button class="btn3">wow</button></div>
+    <div><button class="btn4">wow</button></div>
+    <div><button class="btn5">wow</button></div>
+  </body>
+</html>
