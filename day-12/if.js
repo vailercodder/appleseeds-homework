@@ -50,11 +50,11 @@ if (viewerAge >= 13 && viewerAge <= 18) {
 }
 
 //EX6. 
-const popularityScore = 85; // 
+const popularityScore = 85; 
 console.log(popularityScore >= 80 ? "Popular movie" : "Less known movie");
 
-//EX 7. Check Number of Awards (Even or Odd) with Ternary Operator:
-const numOfAwards = 5; // Example number of awards
+//EX 7. 
+const numOfAwards = 5; 
 console.log(numOfAwards % 2 === 0 ? "Even number of awards" : "Odd number of awards");
 
 // EX8. 
@@ -64,12 +64,12 @@ console.log(
   actorAge <= 24 ? "Young Actor" : "Adult Actor"
 );
 
-// EX9. Access Control to a Premiere Event:
-const hasInvitation = true; // Example boolean
+// 
+const hasInvitation = true; 
 console.log(hasInvitation ? "Welcome to the premiere" : "Please check your invitation");
 
-// EX10. Movie Screening Duration Category:
-const screeningDuration = 90; // Example duration in minutes
+// EX10.
+const screeningDuration = 90; 
 if (screeningDuration < 40) {
   console.log('Short film');
 } else if (screeningDuration <= 120) {
