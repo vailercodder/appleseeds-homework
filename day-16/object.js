@@ -171,6 +171,7 @@ const skillLevels = {
 
 function avrSkills(avr) {
   const keys = Object.keys(avr);
+  R;
 
   for (const key of keys) {
     const skills = avr[key];
@@ -181,3 +182,22 @@ function avrSkills(avr) {
 }
 
 avrSkills(skillLevels);
+
+//ex10
+const questRewards = {
+  "Find the Lost Sword": "Legendary Weapon",
+  "Defeat the Dragon": "Epic Armor",
+  "Escort the Merchant": "Gold",
+  "Discover the Ancient Ruins": "Legendary Weapon",
+};
+
+function changequest(questRewards) {
+  const rewardMap = {};
+
+  for (const [quest, reward] of Object.entries(questRewards)) {
+    if (!rewardsMap[reward]) {
+      rewardsMap[reward] = [];
+    }
+    rewardMap[reward].push(quest);
+  }
+}
