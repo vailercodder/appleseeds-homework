@@ -46,7 +46,7 @@ findCharacterStrength("Ezio");
 
 
 //ex4
-
+let characterStats = [];
 function updateCharacterStrength(characterName,newStrength) {
     let searchName = characterName.toLowerCase();
 
